@@ -1,13 +1,13 @@
-extern crate reqwest;
 extern crate serde_json;
+extern crate reqwest;
 
 use serde_json::json;
 
-pub struct ConsulClient {
+pub struct KVStore {
     pub host: String
 }
 
-impl ConsulClient {
+impl KVStore {
     pub fn list(&self) -> serde_json::Value {
         let mut path = self.host.clone();
         path.push_str("/v1/kv/?keys&separator=%2F");

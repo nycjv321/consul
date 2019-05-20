@@ -4,5 +4,14 @@ A barebones consul client/lib/sdk for consul. Currently this lib only supports a
 
 ## Why?
 1) Wanted a dead simple API.
-2) Wanted a client that supported recent versions of SSL and didn't require me rewriting an existing lib to implement it (see point 3)
-3) Why not?
+2) Wanted a client that supported recent versions of SSL and didn't require me rewriting an existing lib to implement it
+
+## Usage
+
+	use kv::KVStore;
+
+	fn main() {
+   	  let store = KVStore {host: String::from("http://127.0.0.1:8500")};
+   	  println!("{:#?}",  store.get(String::from("foo/bar/bar")));
+ 	  println!("{}", store.put(String::from("foo/bar/bar"), String::from("foo")))
+	}

@@ -1,9 +1,9 @@
-mod client;
+mod kv;
 
-use client::ConsulClient;
+use kv::KVStore;
 
 fn main() {
-   let client = ConsulClient{host: String::from("http://127.0.0.1:8500")};
-   println!("{:#?}",  client.get(String::from("foo/bar/bar")));
-   println!("{}", client.put(String::from("foo/bar/bar"), String::from("foo")))
+   let store = KVStore {host: String::from("http://127.0.0.1:8500")};
+   println!("{:#?}",  store.get(String::from("foo/bar/bar")));
+   println!("{}", store.put(String::from("foo/bar/bar"), String::from("foo")))
 }
