@@ -1,6 +1,6 @@
 # consul-client
 ## About
-A barebones consul client/lib/sdk for consul. Currently this lib only supports a few operations on Consul K/V. More are planned and PRs are welcomed!
+A barebones consul client/lib/sdk for consul. Currently, this lib only supports a few operations on Consul K/V. More are planned and PRs are welcomed!
 
 ## Why?
 1) Wanted a dead simple API.
