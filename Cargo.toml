@@ -1,5 +1,5 @@
 [package]
-name = "consul"
+name = "consul-client"
 version = "0.1.0"
 authors = ["Javier L. Velasquez <nycjv321@gmail.com>"]
 edition = "2018"
